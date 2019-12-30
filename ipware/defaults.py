@@ -7,6 +7,7 @@ from django.conf import settings
 # Configurable via settings.py
 IPWARE_META_PRECEDENCE_ORDER = getattr(settings,
     'IPWARE_META_PRECEDENCE_ORDER', (
+        'HTTP_X_ORIGINAL_FORWARDED_FOR',
         'HTTP_X_FORWARDED_FOR', 'X_FORWARDED_FOR',
         'HTTP_CLIENT_IP',
         'HTTP_X_REAL_IP',
